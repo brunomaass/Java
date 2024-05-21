@@ -8,24 +8,37 @@ public class AccountTest
 {
     public static void main(String[] args)
     {
-        // Cria um objeto Scanner para obter entrada a partir da janela de comando
         Scanner input = new Scanner(System.in);
 
-        // Cria um objeto Account e o atribui a myaccount
-        Account myAccount = new Account();
+        // Cria dois objetos Account
+        Account account1 = new Account("Bruno Maass", 5);
+        Account account2 = new Account("Polyane Maass", -366);
 
-        // Exibe o valor inicial do nome (null)
-        System.out.printf("Initial name is: %s%n%n", myAccount.getName());
+        // Exibe o valor inicial de para cada Account e o saldo
+        System.out.printf("account1 name is: %s%n", account1.getName());
+        System.out.printf("The initial account1 balance is: %s%n", account1.getBalance());
+        System.out.printf("account2 name is: %s%n", account2.getName());
+        System.out.printf("The initial account2 balance is: %s%n%n", account2.getBalance());
 
-        // solicita e le o nome
-        System.out.println("Please enter the name:");
-        String theName = input.nextLine(); // Le uma linha de texto
-        myAccount.setName(theName);// insere theName em myAccount
-        System.out.println(); // gera saida de uma linha em branco
+        // deposita na account1
+        System.out.println("Enter the valor of deposit of account1: ");
+        double depositAmount = input.nextDouble(); // obtem a entrada do usuário
+        System.out.printf("%nAdditing %.2f to account1 balance%n%n", depositAmount);
+        account1.deposit(depositAmount); // adiciona o saldo de account
 
-        // exibe o nome armazenado no objeto myAccount
-        System.out.printf("Name in object myAccount is: %n%s%n", myAccount.getName());
+        // exibe os saldos
+        System.out.printf("The account1 balance is: %s%n", account1.getBalance());
+        System.out.printf("The account2 balance is: %s%n%n", account2.getBalance());
 
+        // deposita na account2
+        System.out.println("Enter the valor of deposit of account2: ");
+        depositAmount = input.nextDouble(); // obtem a entrada do usuário
+        System.out.printf("%nAdditing %.2f to account2 balance%n%n", depositAmount);
+        account2.deposit(depositAmount); // adiciona o saldo de account
+
+        // exibe o saldo atualizado
+        System.out.printf("The account1 balance is: %s%n", account1.getBalance());
+        System.out.printf("The account2 balance is: %s%n%n", account2.getBalance());
 
     }
 }
