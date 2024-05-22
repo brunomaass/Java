@@ -40,7 +40,9 @@ public class Inicial {
         System.out.printf("Sexo: %s%n", profile.getSex());
         System.out.printf("Sua frequência cardíaca máxima é: %d%n", profile.calcMaxHeathFrequency());
         System.out.printf("Sua frequência cardiaca ideal é entre: %.2f e %.2f%n", profile.minIdealFrequency(), profile.maxIdealFrequency());
-        System.out.printf("Seu IMC é %.2f", profile.calcImc());
+        System.out.printf("Seu IMC é %.2f%n%n", profile.calcImc());
+        System.out.println("---------------------------------------");
+        System.out.printf("%s", profile.tableImc());
 
     }
 }

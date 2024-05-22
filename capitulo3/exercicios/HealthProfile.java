@@ -164,4 +164,18 @@ public class HealthProfile
     {
         return weight / (height * height);
     }
+
+
+    // Tabela Imc
+    public  String tableImc()
+    {
+       String imc = "BMI VALUES\n";
+       String underweight = "Underweight:  less than 18,5\n";
+       String normal = "Normal:       between 18,5 and 24,9\n";
+       String overweight = "Overweight:   between 25 adn 29,9\n";
+       String obese = "Obese =       30 or greater\n";
+
+       return imc + underweight + normal + overweight + obese;
+
+    }
 }
