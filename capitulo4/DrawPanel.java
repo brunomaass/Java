@@ -14,10 +14,22 @@ public class DrawPanel extends JPanel
         int width = getWidth(); // largura total
         int height = getHeight(); // altura total
 
-        // desenha uma linha a partir do canto superior esquerdo até o inferior direito
-        g.drawLine(0, 0, width, height);
+        int count = 0;
+        int x = 0;
+        int y = 0;
 
-        // desenha uma linha a partir do canto inferior esquerdo até o superior direito
-        g.drawLine(0, height, width, 0);
+        while (count < 15)
+        {
+
+            // desenha uma linha a partir do canto superior esquerdo até o inferior direito
+            g.drawLine(0, y, width, height);
+
+            // desenha uma linha a partir do canto inferior esquerdo até o superior direito
+            g.drawLine(width, height, x, 0);
+            count++;
+            x = x + 50;
+            y = y + 50;
+
+        }
     }
 }// fim da classe DrawPanel
