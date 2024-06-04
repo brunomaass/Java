@@ -8,7 +8,7 @@ public class Craps
     // cria um gerador seguro de números aleatórios para uso no método rollDice
     private static final SecureRandom randomNumbers = new SecureRandom();
 
-    // tipo unum com constantes que representam o estado do jogo
+    // tipo enum com constantes que representam o estado do jogo
     private enum Status {CONTINUE, WON, LOST};
 
     // constantes que representam lançamentos comuns dos dados
