@@ -6,8 +6,6 @@ public class IntArray
 {
     public static void main(String[] args)
     {
-        // declara array variável e o incializa com um objeto array
-        //int[] array = new int[10]; // cria o objeto array
 
         // A lista de inicializador especifica o valor inicial de cada elemento
         int[] array = {32, 27, 64, 18, 95, 14, 90, 70, 60, 37};
